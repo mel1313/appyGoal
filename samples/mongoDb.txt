@@ -1,0 +1,51 @@
+userId
+-------
+
+{
+    "_id" : ObjectId("570753897cec17c763d78a40"),
+    "userId" : "admin",
+    "activeDir" : false,
+    "pswd" : -1522920846,
+    "reset" : false,
+    "userGroup" : ObjectId("5714d7cb41cd98d42cd03eb3"),
+    "eMail" : "admin@email",
+    "name" : "admin",
+    "updatedBy" : "admin",
+    "updatedOn" : "2016-04-09 19:27",
+    "_ts" : 1460204874
+}
+
+userGroup
+----------
+
+{
+    "_id" : ObjectId("5714d7cb41cd98d42cd03eb3"),
+    "name" : "admin",
+    "rightsList" : "[{\"name\":\"System\",\"rights\":{\"userId\":true,\"group\":true}},{\"name\":\"App\",\"rights\":{\"SetUp\":true}}]",
+    "createdBy" : "admin",
+    "createdOn" : "2016-04-18 19:49",
+    "_ts" : 1460983755
+}
+
+config
+-------
+
+{
+    "_id" : ObjectId("5708c19e7cec17c763d78a43"),
+    "key" : "rights",
+    "value" : [ 
+        {
+            "name" : "System",
+            "rights" : {
+                "userId" : true,
+                "group" : true
+            }
+        }, 
+        {
+            "name" : "App",
+            "rights" : {
+                "SetUp" : true
+            }
+        }
+    ]
+}

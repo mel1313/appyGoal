@@ -1,0 +1,83 @@
+﻿<div class="container">
+
+    <div class="row">
+        <div class="col-xs-11 col-sm-11 col-md-11">
+            <div class=impact>{{title}}</div>
+        </div>
+
+            <div class="col-xs-1 col-sm-1 col-md-1">
+                <div class="form-group">
+                    <button title="LogOut" data-ng-model="button" class="btn btn-danger" style="float:right" data-ng-hide="Submit" class="form-control" data-ng-click="onLogOut()">LogOut</button>
+                </div>
+            </div>
+   </div>
+
+    <hr style="height:3px;border:none;color:#333;background-color:#333;" />
+    
+   <!--App-->
+
+    <div class="row">
+
+        <div class="col-xs-1 col-sm-1 col-md-1 buttonBlock" data-bind-height-to-width="0.5"></div>
+
+        <!--stats-->
+        <div class="col-xs-3 col-sm-3 col-md-3 buttonBlock" ng-show="userRights.App.SetUp" data-bind-height-to-width="0.5">
+            <a href="#stats" class="green-btn ownThumbnail thumbnailContent">
+                <img src="myLib/icons/record.png" height="100" width="100" />
+                <p><font color="black">Score Card</font></p>
+            </a>
+        </div>
+
+        <!--chat-->
+        <div class="col-xs-3 col-sm-3 col-md-3 buttonBlock" ng-show="userRights.App.SetUp" data-bind-height-to-width="0.5">
+            <a href="#chat" class="green-btn ownThumbnail thumbnailContent">
+                <img src="myLib/icons/chat.png" height="100" width="100" />
+                <p><font color="black">chat</font></p>
+            </a>
+        </div>
+
+        <!--shop-->
+        <div class="col-xs-3 col-sm-3 col-md-3 buttonBlock" ng-show="userRights.App.SetUp" data-bind-height-to-width="0.5">
+            <a href="#shop" class="green-btn ownThumbnail thumbnailContent">
+                <img src="myLib/icons/shopping.png" height="100" width="100" />
+                <p><font color="black">shop</font></p>
+            </a>
+        </div>
+
+        <div class="col-xs-1 col-sm-1 col-md-1 buttonBlock" data-bind-height-to-width="0.5"></div>
+
+        </div>
+    </div>
+
+        <!--system-->
+        <div class="row">
+
+            <div class="col-xs-0 col-sm-2 col-md-4 buttonBlock" data-bind-height-to-width="0.5">
+            </div>
+
+            <div class="col-xs-3 col-sm-2 col-md-2 buttonBlock" ng-show="userRights.System.group" data-bind-height-to-width="0.5">
+                <a href="#group" class="green-btn ownThumbnail thumbnailContent">
+                    <img src="myLib/icons/group.png" height="100" width="100" />
+                    <p><font color="black">Group</font></p>
+                </a>
+
+            </div>
+
+
+            <div class="col-xs-3 col-sm-2 col-md-2 buttonBlock" ng-show="userRights.System.userId" data-bind-height-to-width="0.5">
+                <a href="#userId" class="orange-btn ownThumbnail thumbnailContent">
+                    <img src="myLib/icons/userId.png" height="100" width="100" />
+                    <p><font color="black">UserId</font></p>
+                </a>
+            </div>
+
+
+            <div class="col-xs-0 col-sm-2 col-md-4 buttonBlock" data-bind-height-to-width="0.5">
+            </div>
+
+        </div>
+
+
+
+    </div>
+

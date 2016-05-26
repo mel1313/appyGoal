@@ -1,0 +1,32 @@
+﻿<form name="masterForm">
+
+    <div class="container">
+
+        
+        <div ng-include="'mylib/mvc/master/masterHeaderView.html'"></div>
+
+   
+
+    <div class="row">
+
+        <div class="col-md-12 col-lg-12">
+
+            
+        
+            <div data-ui-grid="form.memberGroup" data-ui-grid-selection data-ui-grid-edit data-ui-grid-row-edit data-ui-grid-cellnav class="xxxxGrid">
+                
+            </div>
+
+            <br />
+            <br />
+            <button title="Create Group" data-ng-click="onCreate()">Create Group</button>
+            <button title="Invite Members" data-ng-click="onInvite()">Invite Members</button>
+            <button title="Invite Members" data-ng-click="onLeave()">Leave Group</button>
+
+        </div>
+
+    </div>
+
+        </div>
+
+</form>

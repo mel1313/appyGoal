@@ -1,0 +1,11 @@
+﻿{
+    "appName": "appyGoal",
+    "dbName":  "appyGoal",
+    "dbType":  "mongoDb",
+    "webApiUrl": "http://localhost:3000",
+    "filesUrl": "http://localhost:3000",
+    "title": "Appy Goal",
+    "version": "1.0.1",
+    "userId": "melv",
+	"pswd": "123"
+}

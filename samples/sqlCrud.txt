@@ -1,0 +1,216 @@
+-- Testing
+-- crudDel '00000000-0000-0000-0000-000000000000',0
+
+
+Create Procedure [dbo].[crudDel]
+(
+	@_id uniqueIdentifier,
+	@_ts bigInt
+
+)
+
+AS
+
+SET NOCOUNT ON
+
+DECLARE @ErrMsg_VC  varchar(max)
+
+Delete 
+From crud 
+Where _id = @_id and CONVERT(decimal, _ts + 0) = @_ts
+
+If @@rowCount = 0
+BEGIN
+	Select @ErrMsg_Vc = 'Unable to update record <br/> Record may have been modified by another user <br/> Please refresh data'
+	GOTO ENDERROR
+END
+
+
+RETURN  
+
+-- **************
+-- Error Handling
+-- **************
+
+ENDERROR:
+   BEGIN
+	 RAISERROR (@ErrMsg_VC, 16, 1)
+	 RETURN -1
+   END
+
+
+
+go
+
+-- Testing
+-- crudGet '00000000-0000-0000-0000-000000000000'
+
+Create Procedure [dbo].[crudGet]
+(
+	@_id uniqueIdentifier
+)
+
+As
+
+SET NOCOUNT ON
+
+Select  _id = _id, _ts = CONVERT(decimal,_ts + 0), code = rtrim(code), name = rtrim(name)  
+From crud
+Where _id = @_id
+
+go
+
+-- Testing
+-- crudIns 'system','20160101','test1','test1 Name'
+
+Create Procedure [dbo].[crudIns]
+(
+	@createdBy char(35),
+    @createdOn smallDateTime,
+	@code char(15),
+	@name varchar(35)
+)
+	
+
+
+AS
+
+SET NOCOUNT ON
+
+DECLARE @_id uniqueIdentifier
+DECLARE @ErrMsg_VC  varchar(max)
+
+
+-- Create New ID
+Select @_id = newid() 
+
+-- Insert Action
+Insert into crud
+(
+_id,
+createdBy,
+createdOn,
+code,
+name
+)
+Select
+@_id,
+@createdBy,
+@createdOn,
+@code,
+@name
+
+If @@rowCount = 0
+BEGIN
+	Select @ErrMsg_Vc = 'Unable to insert record <br/>'
+	GOTO ENDERROR
+END
+
+Select _id = @_id
+
+RETURN  
+
+-- **************
+-- Error Handling
+-- **************
+
+ENDERROR:
+   BEGIN
+	 RAISERROR (@ErrMsg_VC, 16, 1)
+	 RETURN -1
+   END
+
+
+
+
+
+go
+
+
+-- Testing
+-- crudKey 
+
+
+Create Procedure [dbo].[crudKey]
+as 
+
+SET NOCOUNT ON
+
+select [key] = A._id, value = A.name from crud A
+
+order by A.name;
+
+go
+
+-- Testing
+-- crudSel null
+-- crudSel '00000000-0000-0000-0000-000000000000'
+
+Create Procedure [dbo].[crudSel]
+(
+	@_id uniqueIdentifier
+)
+
+As
+
+SET NOCOUNT ON
+
+Select  _id = A._id, _ts =  CONVERT(decimal, A._ts + 0), code = rtrim(A.code), name = rtrim(A.name) 
+from crud A 
+Where (@_id is Null or A._id  = @_id)
+order by A.name
+
+go
+
+-- Testing
+-- crudUpd '00000000-0000-0000-0000-000000000000',0000, 'system','20160101','test1','test1 Name'
+
+Create Procedure [dbo].[crudUpd]
+(
+	@_id uniqueIdentifier,
+	@_ts bigInt,
+	@updatedBy char(35),
+    @updatedOn smallDateTime,
+	@code char(15),
+	@name varchar(35)
+	
+)
+
+
+AS
+
+SET NOCOUNT ON
+
+DECLARE @ErrMsg_VC  varchar(200)
+
+UPDATE crud set 
+updatedBy = @updatedBy,  
+updatedOn = @updatedOn,
+code = @code,
+name = @name 
+where _id =  @_id and CONVERT(decimal, _ts + 0) = @_ts
+
+If @@rowCount = 0
+BEGIN
+	Select @ErrMsg_Vc = 'Unable to update record <br/> Record may have been modified by another user <br/> Please refresh data'
+	GOTO ENDERROR
+END
+
+
+RETURN  
+
+-- **************
+-- Error Handling
+-- **************
+
+ENDERROR:
+   BEGIN
+    RAISERROR (@ErrMsg_VC, 16, 1)
+	RETURN -1
+   END
+
+
+
+
+
+

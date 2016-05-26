@@ -1,0 +1,111 @@
+﻿
+<div class="container">
+
+    <div class="row" style="margin-top:2cm">
+
+
+        <div class="col-xs-2 col-sm-3 col-md-4 col-lg-4">
+
+
+        </div>
+
+
+
+        <div class="col-xs-8 col-sm-6 col-md-4 col-lg-3">
+            <div class="control-panel">
+
+                <div class=impact>{{title}}</div>
+                <br />
+                <br />
+
+
+                <div class="row">
+                    <div class="col-xs-12 col-sm-12 col-md-12">
+                        <div class="form-group">
+                            <label>
+                                User ID
+                                <input type="text" data-ng-model="data.userId" class="form-control">
+                            </label>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="row">
+                    <div class="col-xs-12 col-sm-12 col-md-12">
+                        <div class="form-group">
+                            <label>
+                                Password
+                                <input type="password" data-ng-model="local.pswd" class="form-control">
+                            </label>
+                        </div>
+                    </div>
+                </div>
+
+
+                <div class="row">
+                    <div class="col-xs-12 col-sm-12 col-md-12">
+                        <div class="form-group">
+                            <input type="checkbox" name="ChgPswd" data-ng-change="onChgPswd()" data-ng-model="data.reset"> Reset Password
+                        </div>
+                    </div>
+                </div>
+
+                <div class="row">
+                    <div class="col-xs-12 col-sm-12 col-md-12" ng-show="data.reset">
+                        <div class="form-group">
+                            <label>
+                                New Password
+                                <input type="password" data-ng-model="local.newPswd" class="form-control">
+                            </label>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="row">
+                    <div class="col-md-12" ng-show="data.reset">
+                        <div class="form-group">
+                            <label>
+                                Confirm Password
+                                <input type="password" data-ng-model="local.confirmPswd" class="form-control">
+                            </label>
+                        </div>
+                    </div>
+                </div>
+
+
+
+                <div class="row">
+                    
+
+                    <div data-ng-hide="data.reset">
+                        <div class="form-group">
+                            <!--<div style="padding-bottom:22px;width:100px;height:75px"><img src="icons/app.png"></div>-->
+                            <div class="imgApp">
+                                <img src="icons/app.png" />
+                            </div>
+
+                        </div>
+                    </div>
+                   
+                   
+                 </div>
+
+
+                    <div class="row">
+                        <div class="col-md-12">
+                            <br />
+                          
+                            <button class="btn btn-success" ng-click="onlogInClick()" class="form-control">Submit</button>
+                        </div>
+
+                    </div>
+
+                </div>
+                </div>
+
+                <div class="col-xs-2 col-sm-3 col-md-4 col-lg-4">
+
+
+                </div>
+            </div>
+</div>

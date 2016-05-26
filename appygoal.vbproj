@@ -1,0 +1,409 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>
+    </ProductVersion>
+    <SchemaVersion>
+    </SchemaVersion>
+    <ProjectGuid>{164121AB-ACCD-4952-8034-9EA7A8460F50}</ProjectGuid>
+    <ProjectTypeGuids>{349c5851-65df-11da-9384-00065b846f21};{F184B08F-C81C-45F6-A57F-5ABD9991F28F}</ProjectTypeGuids>
+    <OutputType>Library</OutputType>
+    <RootNamespace>appygoal</RootNamespace>
+    <AssemblyName>appygoal</AssemblyName>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <MyType>Custom</MyType>
+    <UseIISExpress>true</UseIISExpress>
+    <IISExpressSSLPort />
+    <IISExpressAnonymousAuthentication />
+    <IISExpressWindowsAuthentication />
+    <IISExpressUseClassicPipelineMode />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <DefineDebug>true</DefineDebug>
+    <DefineTrace>true</DefineTrace>
+    <OutputPath>bin\</OutputPath>
+    <DocumentationFile>appygoal.xml</DocumentationFile>
+    <NoWarn>42016,41999,42017,42018,42019,42032,42036,42020,42021,42022</NoWarn>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <DefineDebug>false</DefineDebug>
+    <DefineTrace>true</DefineTrace>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DocumentationFile>appygoal.xml</DocumentationFile>
+    <NoWarn>42016,41999,42017,42018,42019,42032,42036,42020,42021,42022</NoWarn>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Web.Extensions" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Web.DynamicData" />
+    <Reference Include="System.Web.Entity" />
+    <Reference Include="System.Web.ApplicationServices" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.EnterpriseServices" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="bin\" />
+    <Folder Include="fonts\" />
+    <Folder Include="ngLib\fonts\" />
+    <Folder Include="obj\Debug\TempPE\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Import Include="Microsoft.VisualBasic" />
+    <Import Include="System" />
+    <Import Include="System.Collections" />
+    <Import Include="System.Collections.Generic" />
+    <Import Include="System.Data" />
+    <Import Include="System.Linq" />
+    <Import Include="System.Xml.Linq" />
+    <Import Include="System.Diagnostics" />
+    <Import Include="System.Collections.Specialized" />
+    <Import Include="System.Configuration" />
+    <Import Include="System.Text" />
+    <Import Include="System.Text.RegularExpressions" />
+    <Import Include="System.Web" />
+    <Import Include="System.Web.Caching" />
+    <Import Include="System.Web.SessionState" />
+    <Import Include="System.Web.Security" />
+    <Import Include="System.Web.Profile" />
+    <Import Include="System.Web.UI" />
+    <Import Include="System.Web.UI.WebControls" />
+    <Import Include="System.Web.UI.WebControls.WebParts" />
+    <Import Include="System.Web.UI.HtmlControls" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="config.txt" />
+    <Content Include="country.txt" />
+    <Content Include="css\app.css" />
+    <Content Include="css\glyphicons-halflings-regular.svg" />
+    <Content Include="icons\app.png" />
+    <Content Include="icons\city.png" />
+    <Content Include="icons\district.png" />
+    <Content Include="icons\group.png" />
+    <Content Include="icons\loadingDoc.png" />
+    <Content Include="icons\podEntry.png" />
+    <Content Include="icons\podLoading.png" />
+    <Content Include="icons\podReport.png" />
+    <Content Include="icons\province.png" />
+    <Content Include="icons\store.png" />
+    <Content Include="icons\transporter.png" />
+    <Content Include="icons\userId.png" />
+    <Content Include="index.html" />
+    <Content Include="js\app.js" />
+    <Content Include="mvc\addGame\addGameController.js" />
+    <Content Include="mvc\addGame\addGameView.html" />
+    <Content Include="mvc\addScore\addScoreController.js" />
+    <Content Include="mvc\addScore\addScoreView.html" />
+    <Content Include="mvc\chat\chatController.js" />
+    <Content Include="mvc\chat\chatView.html" />
+    <Content Include="mvc\modifyGoal\modifyGoalController.js" />
+    <Content Include="mvc\modifyGoal\modifyGoalView.html" />
+    <Content Include="mvc\group\groupView.html" />
+    <Content Include="mvc\group\groupController.js" />
+    <Content Include="mvc\player\playerController.js" />
+    <Content Include="mvc\player\playerView.html" />
+    <Content Include="mvc\memberGroup\memberGroupController.js" />
+    <Content Include="mvc\memberGroup\memberGroupView.html" />
+    <Content Include="mvc\menu\menuController.js" />
+    <Content Include="mvc\menu\menuView.html" />
+    <Content Include="mvc\menu\menuViewOld.html" />
+    <Content Include="mvc\shop\shopController.js" />
+    <Content Include="mvc\shop\shopView.html" />
+    <Content Include="mvc\splash\splashController.js" />
+    <Content Include="mvc\splash\splashView.html" />
+    <Content Include="mvc\stats\statsController.js" />
+    <Content Include="mvc\stats\statsView.html" />
+    <Content Include="mvc\userLogin\newUserController.js" />
+    <Content Include="mvc\userLogin\newUserView.html" />
+    <Content Include="mvc\userLogin\userLoginView.html" />
+    <Content Include="mvc\userLogin\userLoginController.js" />
+    <Content Include="mvc\verify\verifyController.js" />
+    <Content Include="mvc\verify\verifyView.html" />
+    <Content Include="mvc\playerHistory\playerHistoryController.js" />
+    <Content Include="mvc\playerHistory\playerHistoryView.html" />
+    <Content Include="myLib\css\app.css" />
+    <Content Include="myLib\icons\ai.png" />
+    <Content Include="myLib\icons\alert.jpg" />
+    <Content Include="myLib\icons\avi.png" />
+    <Content Include="myLib\icons\bmp.png" />
+    <Content Include="myLib\icons\c.png" />
+    <Content Include="myLib\icons\chat.png" />
+    <Content Include="myLib\icons\confirm.png" />
+    <Content Include="myLib\icons\css.png" />
+    <Content Include="myLib\icons\dat.png" />
+    <Content Include="myLib\icons\delRow.gif" />
+    <Content Include="myLib\icons\dmg.png" />
+    <Content Include="myLib\icons\doc.png" />
+    <Content Include="myLib\icons\Document.png" />
+    <Content Include="myLib\icons\docx.png" />
+    <Content Include="myLib\icons\dot.png" />
+    <Content Include="myLib\icons\dotx.png" />
+    <Content Include="myLib\icons\dwg.png" />
+    <Content Include="myLib\icons\dxf.png" />
+    <Content Include="myLib\icons\eps.png" />
+    <Content Include="myLib\icons\error.jpg" />
+    <Content Include="myLib\icons\excel.png" />
+    <Content Include="myLib\icons\exe.png" />
+    <Content Include="myLib\icons\file.png" />
+    <Content Include="myLib\icons\gif.png" />
+    <Content Include="myLib\icons\group.png" />
+    <Content Include="myLib\icons\html.png" />
+    <Content Include="myLib\icons\insRow.gif" />
+    <Content Include="myLib\icons\iso.png" />
+    <Content Include="myLib\icons\java.png" />
+    <Content Include="myLib\icons\jpg.png" />
+    <Content Include="myLib\icons\key.png" />
+    <Content Include="myLib\icons\mid.png" />
+    <Content Include="myLib\icons\mov.png" />
+    <Content Include="myLib\icons\mp4.png" />
+    <Content Include="myLib\icons\odp.png" />
+    <Content Include="myLib\icons\ods.png" />
+    <Content Include="myLib\icons\odt.png" />
+    <Content Include="myLib\icons\otp.png" />
+    <Content Include="myLib\icons\ots.png" />
+    <Content Include="myLib\icons\ott.png" />
+    <Content Include="myLib\icons\pdf.png" />
+    <Content Include="myLib\icons\php.png" />
+    <Content Include="myLib\icons\png.png" />
+    <Content Include="myLib\icons\pps.png" />
+    <Content Include="myLib\icons\ppt.png" />
+    <Content Include="myLib\icons\psd.png" />
+    <Content Include="myLib\icons\qt.png" />
+    <Content Include="myLib\icons\rar.png" />
+    <Content Include="myLib\icons\record.png" />
+    <Content Include="myLib\icons\rtf.png" />
+    <Content Include="myLib\icons\shopping.png" />
+    <Content Include="myLib\icons\sql.png" />
+    <Content Include="myLib\icons\success.jpg" />
+    <Content Include="myLib\icons\tgz.png" />
+    <Content Include="myLib\icons\tiff.png" />
+    <Content Include="myLib\icons\txt.png" />
+    <Content Include="myLib\icons\userId.png" />
+    <Content Include="myLib\icons\verify.png" />
+    <Content Include="myLib\icons\wav.png" />
+    <Content Include="myLib\icons\word.png" />
+    <Content Include="myLib\icons\xls.png" />
+    <Content Include="myLib\icons\xlsx.png" />
+    <Content Include="myLib\icons\xml.png" />
+    <Content Include="myLib\icons\zip.png" />
+    <Content Include="myLib\js\sysBitApi.js" />
+    <Content Include="myLib\mvc\basic\basicController.js" />
+    <Content Include="myLib\mvc\basic\basicView.html" />
+    <Content Include="myLib\mvc\group\groupController.js" />
+    <Content Include="myLib\mvc\group\groupView.html" />
+    <Content Include="myLib\mvc\logIn\logInController.js" />
+    <Content Include="myLib\mvc\logIn\logInView.html" />
+    <Content Include="myLib\mvc\master\masterController.js" />
+    <Content Include="myLib\mvc\master\masterFooterView.html" />
+    <Content Include="myLib\mvc\master\masterHeaderView.html" />
+    <Content Include="myLib\mvc\master\masterTableView.html" />
+    <Content Include="myLib\mvc\msg\errMsgs.html" />
+    <Content Include="myLib\mvc\msg\msgController.js" />
+    <Content Include="myLib\mvc\msg\msgView.html" />
+    <Content Include="myLib\mvc\userId\userIdController.js" />
+    <Content Include="myLib\mvc\userId\userIdView.html" />
+    <Content Include="ngLib\angular-file-upload-shim.min.js" />
+    <Content Include="ngLib\angular-file-upload.min.js" />
+    <Content Include="ngLib\angular-local-storage.min.js" />
+    <Content Include="ngLib\angular-route.min.js" />
+    <Content Include="ngLib\angular-sanitize.min.js" />
+    <Content Include="ngLib\angular-touch.min.js" />
+    <Content Include="ngLib\angular.min.js" />
+    <Content Include="ngLib\css\bootstrap-theme.css" />
+    <Content Include="ngLib\css\bootstrap-theme.min.css" />
+    <Content Include="ngLib\css\bootstrap.css" />
+    <Content Include="ngLib\css\bootstrap.min.css" />
+    <Content Include="ngLib\css\dialogs.css" />
+    <Content Include="ngLib\css\dialogs.min.css" />
+    <Content Include="ngLib\css\font-awesome-4.3.0\css\font-awesome.css" />
+    <Content Include="ngLib\css\font-awesome-4.3.0\css\font-awesome.min.css" />
+    <Content Include="ngLib\css\font-awesome-4.3.0\fonts\fontawesome-webfont.svg" />
+    <Content Include="ngLib\css\index.txt" />
+    <Content Include="ngLib\css\ui-grid-stable.css" />
+    <Content Include="ngLib\css\ui-grid.svg" />
+    <Content Include="ngLib\ng-file-upload-all.js" />
+    <Content Include="ngLib\ng-file-upload-all.min.js" />
+    <Content Include="ngLib\ng-file-upload-shim.js" />
+    <Content Include="ngLib\ng-file-upload-shim.min.js" />
+    <Content Include="ngLib\ng-file-upload.js" />
+    <Content Include="ngLib\ng-file-upload.min.js" />
+    <Content Include="ngLib\ui-bootstrap-tpls-0.10.0.js" />
+    <Content Include="ngLib\ui-bootstrap-tpls-0.13.4.min.js" />
+    <Content Include="ngLib\ui-grid-stable.js" />
+    <Content Include="samples\callModal.js" />
+    <Content Include="samples\crudDel.txt" />
+    <Content Include="samples\crudGet.txt" />
+    <Content Include="samples\crudIns.txt" />
+    <Content Include="samples\crudKey.txt" />
+    <Content Include="samples\crudSel.txt" />
+    <Content Include="samples\crudUpd.txt" />
+    <Content Include="samples\dateController.js" />
+    <Content Include="samples\dateView.html" />
+    <Content Include="samples\gridController.js" />
+    <Content Include="samples\gridView.html" />
+    <Content Include="samples\modalController.js" />
+    <Content Include="samples\modalView.html" />
+    <Content Include="samples\mongoDb.txt" />
+    <Content Include="samples\ng-file-upload-shim.js" />
+    <Content Include="samples\optionController.js" />
+    <Content Include="samples\optionDoubleController.js" />
+    <Content Include="samples\optionDoubleView.html" />
+    <Content Include="samples\optionView.html" />
+    <Content Include="samples\pageController.js" />
+    <Content Include="samples\pageView.html" />
+    <Content Include="samples\radioView.html" />
+    <Content Include="samples\sqlCrud.txt" />
+    <Content Include="samples\sqlDb.txt" />
+    <Content Include="samples\subTableController.js" />
+    <Content Include="samples\subTableView.html" />
+    <Content Include="samples\sysBitWebApi.js" />
+    <Content Include="samples\textView.html" />
+    <Content Include="Web.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="My Project\AssemblyInfo.vb" />
+    <Compile Include="My Project\Application.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Application.myapp</DependentUpon>
+    </Compile>
+    <Compile Include="My Project\MyExtensions\MyWebExtension.vb">
+      <VBMyExtensionTemplateID>Microsoft.VisualBasic.Web.MyExtension</VBMyExtensionTemplateID>
+      <VBMyExtensionTemplateVersion>1.0.0.0</VBMyExtensionTemplateVersion>
+    </Compile>
+    <Compile Include="My Project\Resources.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="My Project\Settings.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="My Project\Resources.resx">
+      <Generator>VbMyResourcesResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.vb</LastGenOutput>
+      <CustomToolNamespace>My.Resources</CustomToolNamespace>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="css\glyphicons-halflings-regular.eot" />
+    <Content Include="css\glyphicons-halflings-regular.ttf" />
+    <Content Include="css\glyphicons-halflings-regular.woff" />
+    <Content Include="css\glyphicons-halflings-regular.woff2" />
+    <None Include="My Project\Application.myapp">
+      <Generator>MyApplicationCodeGenerator</Generator>
+      <LastGenOutput>Application.Designer.vb</LastGenOutput>
+    </None>
+    <None Include="My Project\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <CustomToolNamespace>My</CustomToolNamespace>
+      <LastGenOutput>Settings.Designer.vb</LastGenOutput>
+    </None>
+    <Content Include="ngLib\css\bootstrap-theme.css.map" />
+    <Content Include="ngLib\css\bootstrap.css.map" />
+    <Content Include="ngLib\css\font-awesome-4.3.0\fonts\fontawesome-webfont.eot" />
+    <Content Include="ngLib\css\font-awesome-4.3.0\fonts\fontawesome-webfont.ttf" />
+    <Content Include="ngLib\css\font-awesome-4.3.0\fonts\fontawesome-webfont.woff" />
+    <Content Include="ngLib\css\font-awesome-4.3.0\fonts\fontawesome-webfont.woff2" />
+    <Content Include="ngLib\css\font-awesome-4.3.0\fonts\FontAwesome.otf" />
+    <Content Include="ngLib\css\font-awesome-4.3.0\less\animated.less" />
+    <Content Include="ngLib\css\font-awesome-4.3.0\less\bordered-pulled.less" />
+    <Content Include="ngLib\css\font-awesome-4.3.0\less\core.less" />
+    <Content Include="ngLib\css\font-awesome-4.3.0\less\fixed-width.less" />
+    <Content Include="ngLib\css\font-awesome-4.3.0\less\font-awesome.less" />
+    <Content Include="ngLib\css\font-awesome-4.3.0\less\icons.less" />
+    <Content Include="ngLib\css\font-awesome-4.3.0\less\larger.less" />
+    <Content Include="ngLib\css\font-awesome-4.3.0\less\list.less" />
+    <Content Include="ngLib\css\font-awesome-4.3.0\less\mixins.less" />
+    <Content Include="ngLib\css\font-awesome-4.3.0\less\path.less" />
+    <Content Include="ngLib\css\font-awesome-4.3.0\less\rotated-flipped.less" />
+    <Content Include="ngLib\css\font-awesome-4.3.0\less\stacked.less" />
+    <Content Include="ngLib\css\font-awesome-4.3.0\less\variables.less" />
+    <Content Include="ngLib\css\font-awesome-4.3.0\scss\font-awesome.scss" />
+    <Content Include="ngLib\css\font-awesome-4.3.0\scss\_animated.scss" />
+    <Content Include="ngLib\css\font-awesome-4.3.0\scss\_bordered-pulled.scss" />
+    <Content Include="ngLib\css\font-awesome-4.3.0\scss\_core.scss" />
+    <Content Include="ngLib\css\font-awesome-4.3.0\scss\_fixed-width.scss" />
+    <Content Include="ngLib\css\font-awesome-4.3.0\scss\_icons.scss" />
+    <Content Include="ngLib\css\font-awesome-4.3.0\scss\_larger.scss" />
+    <Content Include="ngLib\css\font-awesome-4.3.0\scss\_list.scss" />
+    <Content Include="ngLib\css\font-awesome-4.3.0\scss\_mixins.scss" />
+    <Content Include="ngLib\css\font-awesome-4.3.0\scss\_path.scss" />
+    <Content Include="ngLib\css\font-awesome-4.3.0\scss\_rotated-flipped.scss" />
+    <Content Include="ngLib\css\font-awesome-4.3.0\scss\_stacked.scss" />
+    <Content Include="ngLib\css\font-awesome-4.3.0\scss\_variables.scss" />
+    <Content Include="ngLib\css\ui-grid.eot" />
+    <Content Include="ngLib\css\ui-grid.ttf" />
+    <Content Include="ngLib\css\ui-grid.woff" />
+    <Content Include="obj\Debug\DesignTimeResolveAssemblyReferencesInput.cache" />
+    <None Include="Web.Debug.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </None>
+    <None Include="Web.Release.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </None>
+  </ItemGroup>
+  <PropertyGroup>
+    <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
+    <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>
+  </PropertyGroup>
+  <PropertyGroup>
+    <OptionExplicit>On</OptionExplicit>
+  </PropertyGroup>
+  <PropertyGroup>
+    <OptionCompare>Binary</OptionCompare>
+  </PropertyGroup>
+  <PropertyGroup>
+    <OptionStrict>Off</OptionStrict>
+  </PropertyGroup>
+  <PropertyGroup>
+    <OptionInfer>On</OptionInfer>
+  </PropertyGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.VisualBasic.targets" />
+  <Import Project="$(VSToolsPath)\WebApplications\Microsoft.WebApplication.targets" Condition="'$(VSToolsPath)' != ''" />
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v10.0\WebApplications\Microsoft.WebApplication.targets" Condition="false" />
+  <ProjectExtensions>
+    <VisualStudio>
+      <FlavorProperties GUID="{349c5851-65df-11da-9384-00065b846f21}">
+        <WebProjectProperties>
+          <UseIIS>True</UseIIS>
+          <AutoAssignPort>True</AutoAssignPort>
+          <DevelopmentServerPort>50254</DevelopmentServerPort>
+          <DevelopmentServerVPath>/</DevelopmentServerVPath>
+          <IISUrl>http://localhost:50254/</IISUrl>
+          <NTLMAuthentication>False</NTLMAuthentication>
+          <UseCustomServer>False</UseCustomServer>
+          <CustomServerUrl>
+          </CustomServerUrl>
+          <SaveServerSettingsInUserFile>False</SaveServerSettingsInUserFile>
+        </WebProjectProperties>
+      </FlavorProperties>
+    </VisualStudio>
+  </ProjectExtensions>
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

@@ -1,0 +1,17 @@
+-- Testing
+-- crudSel null
+-- crudSel '00000000-0000-0000-0000-000000000000'
+
+Create Procedure [dbo].[crudSel]
+(
+	@_id uniqueIdentifier
+)
+
+As
+
+SET NOCOUNT ON
+
+Select  _id = A._id, _ts =  CONVERT(decimal, A._ts + 0), code = rtrim(A.code), name = rtrim(A.name) 
+from crud A 
+Where (@_id is Null or A._id  = @_id)
+order by A.name

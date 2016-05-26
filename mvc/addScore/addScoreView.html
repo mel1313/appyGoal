@@ -1,0 +1,42 @@
+﻿<div class="modal-header">
+    ScoreCard
+</div>
+
+<div class="modal-body">
+
+    <div class="row">
+        <div class="col-xs-4 col-sm-4 col-md-4">
+            <div class="form-group">
+                <div><label for="goal" style="color:blue">Goals</label></div>
+                <input type="number" name="goal" class="form-control" data-ng-model="data.goal" ng-required="true" />
+
+                <div ng-messages="masterForm.goal.$error" ng-show="masterForm.goal.$touched">
+                    <div ng-messages-include="myLib/mvc/msg/errMsgs.html"></div>
+                </div>
+            </div>
+        </div>
+
+       
+
+
+            <div class="col-xs-4 col-sm-4 col-md-4 col-lg-4">
+                <div class="form-group">
+                    <div><label label for="date" style="color:blue">Date</label></div>
+                    <input type="text" name="date" datepicker-popup="{{calendar.dateFormat}}" show-button-bar="false" datepicker-options="calendar.dateOptions" name="input" ng-model="data.date" class="form-control" required>
+
+                    <div ng-messages="masterForm.date.$error" ng-show="masterForm.date.$touched">
+                        <div ng-messages-include="myLib/mvc/msg/errMsgs.html"></div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+
+</div>
+
+<div class="modal-footer">
+
+    <button data-ng-model="button" class="btn btn-success" data-ng-click="onOk()">Ok</button>
+    <button data-ng-model="button" class="btn btn-default active" data-ng-click="onCancel()">Cancel</button>
+
+</div>

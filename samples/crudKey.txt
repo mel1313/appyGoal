@@ -1,0 +1,12 @@
+-- Testing
+-- crudKey 
+
+
+Create Procedure [dbo].[crudKey]
+as 
+
+SET NOCOUNT ON
+
+select [key] = A._id, value = A.name from crud A
+
+order by A.name;

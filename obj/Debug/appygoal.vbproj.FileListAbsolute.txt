@@ -1,0 +1,9 @@
+D:\devApps\appygoal\appygoal\bin\appygoal.dll.config
+D:\devApps\appygoal\appygoal\bin\appygoal.dll
+D:\devApps\appygoal\appygoal\bin\appygoal.pdb
+D:\devApps\appygoal\appygoal\bin\appygoal.xml
+D:\devApps\appygoal\appygoal\obj\Debug\appygoal.Resources.resources
+D:\devApps\appygoal\appygoal\obj\Debug\appygoal.vbproj.GenerateResource.Cache
+D:\devApps\appygoal\appygoal\obj\Debug\appygoal.dll
+D:\devApps\appygoal\appygoal\obj\Debug\appygoal.xml
+D:\devApps\appygoal\appygoal\obj\Debug\appygoal.pdb

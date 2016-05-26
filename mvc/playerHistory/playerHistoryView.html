@@ -1,0 +1,28 @@
+﻿<div class="modal-header">    
+    History
+</div>
+
+<div class="modal-body">
+
+    <div class="row">
+        <div class="form-group">
+            <div class="col-xs-6 col-sm-6 col-md-3 col-lg-3">
+                <div><label for="player" style="color:blue">players</label></div>
+                <select name="player" class="form-control" data-ng-change="onPlayerChange()" data-ng-options=" player.key as player.value for player in playerList" data-ng-disabled="disableControl()" data-ng-model="data.player" ng-required="true"></select>
+            </div>
+        </div>
+         </div>     
+
+    <br/>
+                    <div data-ui-grid="form.historyTable"  data-ui-grid-edit data-ui-grid-row-edit data-ui-grid-cellnav class="xxxxGrid">
+                    </div>              
+           
+    
+          </div>
+
+            <div class="modal-footer">
+
+                <button data-ng-model="button" class="btn btn-success" data-ng-click="onOk()">Ok</button>
+                <button data-ng-model="button" class="btn btn-default active" data-ng-click="onCancel()">Cancel</button>
+
+            </div>

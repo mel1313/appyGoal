@@ -1,0 +1,202 @@
+﻿/*/
+   This is the background of our overlay. We need it to be
+   absolutely positioned within the grid, and fill from
+   top to bottom, and the full width. It will also have
+   a black background with 40% opacity.
+*/
+
+body {
+  padding: 10px;
+}
+
+/*input.ng-invalid {
+  border: 1px solid red;
+}*/
+
+/*body > .dropdown-menu {
+    visibility: hidden;
+    overflow: visible;
+}*/
+
+.imgApp {
+                display: inline;
+            }
+
+            .imgApp img {
+                max-height: 200px;
+                max-width: 200px;
+                object-fit: cover;
+            }
+
+
+
+.grid {
+  width: 100%;
+  height: 60vh;
+  align-content:center;
+}
+
+.grid-msg-overlay {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  width: 100%;
+  background: rgba(0, 0, 0, 0.4);
+}
+ 
+/*
+  This guy will contain our message. We want it centered
+  so it's positioned absolutely with percentage-based
+  offsets and dimensions. It also has some basic border
+  stuff and most important is using "display: table" so
+  we can vertically center its contents.
+*/
+.grid-msg-overlay .msg {
+  opacity: 1;
+  position: absolute;
+  top: 20%;
+  left: 20%;
+  width: 60%;
+  height: 50%;
+  background-color: #eee;
+  border-radius: 4px;
+  border: 1px solid #555;
+  text-align: center;
+  font-size: 24px;
+  display: table;
+}
+ 
+/*
+  Lastly this is the actual message text. It uses
+  display: table-cell so the vertical alignment
+  works properly.
+*/
+.grid-msg-overlay .msg span {
+  display: table-cell;
+  vertical-align: middle;
+}
+
+
+
+.impact {
+color: #333333;
+font-family: Impact, Charcoal, sans-serif;
+font-size:xx-large;
+text-align: center;
+}
+
+.control-panel {
+  border: solid 1px #000;
+  padding: 15px;
+  border-radius: 15px;
+  box-shadow: 5px 5px 5px;
+  width: 100%;
+  text-align: center;
+  background-color: #ddd;
+  display: inline-block;
+  height: 500px;
+}
+
+
+.vcenter {
+    display: inline-block;
+    vertical-align: middle;
+    float: none;
+}
+
+.orange-btn {
+  background-color: orange;
+  height: 100%;
+  width: 100%;
+  border:3px solid #000;
+}
+.orange-btn:hover,
+.orange-btn:active,
+.orange-btn:focus {
+  background-color: #cc8400;
+}
+.blue-btn {
+  background-color:#9ec7f3;
+  height: 100%;
+  width: 100%;
+  border:3px solid #000;
+}
+
+
+.yellow-btn {
+  background-color: yellow;
+  height: 100%;
+  width: 100%;
+  border:3px solid #000;
+}
+.yellow-btn:hover {
+  background-color: #cccc00;
+}
+.green-btn {
+  background-color: green;
+  height: 100%;
+  width: 100%;
+  border:3px solid #000;
+}
+.green-btn:hover {
+  background-color: #004d00;
+}
+.light-orange-btn {
+  background-color: #ffc966;
+  height: 100%;
+  width: 100%;
+  border:3px solid #000;
+}
+.light-orange-btn:hover {
+  background-color: #ffb733;
+  color: black;
+}
+.buttonBlock {
+  margin-bottom: 10px;
+  display: table;
+}
+.ownThumbnail {
+  padding: 4px;
+  line-height: 1.42857143;
+  display: block;
+  margin-bottom: 20px;
+  color: black;
+}
+.ownThumbnail:hover {
+  color: black;
+  border: none;
+}
+.ownThumbnail.active {
+  background-color: gray;
+  color: black;
+}
+.ownThumbnail,
+.ownThumbnail i,
+.ownThumbnail p {
+  color: black;
+}
+a[disabled].ownThumbnail,
+a[disabled].ownThumbnail i,
+a[disabled].ownThumbnail p {
+  background-color: #ccc;
+  color: gray;
+}
+.thumbnailContent {
+  text-align: center;
+  display: table-cell;
+  vertical-align: middle;
+}
+.thumbnailContent i {
+  margin-top: 2px;
+}
+.thumbnailContent p {
+  padding-top: 2px;
+  text-transform: uppercase;
+  font-size: 0.89em;
+}
+
+    
+
+
+
+

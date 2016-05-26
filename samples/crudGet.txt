@@ -1,0 +1,15 @@
+-- Testing
+-- crudGet '00000000-0000-0000-0000-000000000000'
+
+Create Procedure [dbo].[crudGet]
+(
+	@_id uniqueIdentifier
+)
+
+As
+
+SET NOCOUNT ON
+
+Select  _id = _id, _ts = CONVERT(decimal,_ts + 0), code = rtrim(code), name = rtrim(name)  
+From crud
+Where _id = @_id

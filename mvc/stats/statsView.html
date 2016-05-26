@@ -1,0 +1,52 @@
+﻿<form name="masterForm">
+
+    <div class="container">
+
+
+        <div ng-include="'mylib/mvc/master/masterHeaderView.html'"></div>
+
+        <div class="row">
+            <div class="col-xs-12 col-sm-12 col-md-4 col-lg-2">
+                <div class="form-group">
+                    <div><label for="myGroup" style="color:blue">Groups</label></div>
+                    <select class="form-control" name="myGroup" data-ng-change="onGroupChange()" data-ng-options="myGroup.key as myGroup.value for myGroup in myGroupList" data-ng-disabled="disableControl()" data-ng-model=" data.myGroup" ng-required="true"></select>
+
+                </div>
+            </div>
+        </div>
+
+        <!--<ul class="dropdown-menu" aria-labelledby="simple-dropdown">
+            <li ng-repeat="choice in items">
+                <a href>{{choice}}</a>
+            </li>
+        </ul>-->
+      
+        <!--<li ng-repeat="choice in items">
+            <a href>{{choice}}</a>
+        </li>-->
+
+
+        <div class="row">
+            <div class="col-md-12 col-lg-12">
+                <div data-ui-grid="form.playerGroup" class="statsGrid">
+                </div>
+
+                <br />
+                <br />
+                <button title="add game" data-ng-click="onAddGame()">Add Game</button>    
+                <button title="verify goals" data-ng-click="onVerify()">Verify</button>
+                <button title="add player" data-ng-click="onAddPlayer()">Add Player</button>
+                <button title="add group" data-ng-click="onAddGroup()">Add Group</button>
+                <button title="edit goal" data-ng-click="onEditGoal()">Edit</button>
+                <button title="view history" data-ng-click="onViewHistory()">View History</button>
+                
+
+
+
+            </div>
+
+        </div>
+
+    </div>
+
+</form>

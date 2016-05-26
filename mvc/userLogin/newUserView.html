@@ -1,0 +1,159 @@
+﻿<form name="masterForm">
+
+   
+
+    <div class="container">
+
+        <h2>Sign Up</h2>
+
+
+        <div class="row">
+            <div class="col-xs-12 col-sm-12 col-md-6 col-lg-2">
+                <div class="form-group">
+                    <label>
+                        User ID
+                        <input type="text" name="userId" data-ng-model="data.userId" class="form-control" ng-required="true">
+                    </label>
+                    <div ng-messages="masterForm.userId.$error" ng-show="masterForm.userId.$touched">
+                        <div ng-messages-include="myLib/mvc/msg/errMsgs.html"></div>
+                    </div>
+                </div>
+            </div>
+            </div>
+
+
+            <!--name field-->  <!--email field-->
+            <div class="row">
+
+                <!--name-->
+
+                <div class="col-xs-12 col-sm-12 col-md-6 col-lg-2">
+                    <div class="form-group">
+                        <div><label for="name" style="color:black">Name</label></div>
+                        <input type="text" name="name" class="form-control" data-ng-model="data.name" ng-required="true" />
+
+                        <div ng-messages="masterForm.name.$error" ng-show="masterForm.name.$touched">
+                            <div ng-messages-include="myLib/mvc/msg/errMsgs.html"></div>
+                        </div>
+                    </div>
+                    </div>
+                </div>
+
+                <div class="row">
+                    <!--email-->
+
+                    <div class="col-xs-12 col-sm-12 col-md-6 col-lg-2">
+                        <div class="form-group">
+                            <div><label for="email" style="color:black">Email</label></div>
+                            <input type="email" name="email" class="form-control" data-ng-model="data.email" ng-required="true" />
+
+                            <div ng-messages="masterForm.email.$error" ng-show="masterForm.email.$touched">
+                                <div ng-messages-include="myLib/mvc/msg/errMsgs.html"></div>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+
+            <!--Password field-->   <!--Confirm Password field-->
+            <div class="row">
+
+                <!--Password-->
+
+                <div class="col-xs-6 col-sm-6 col-md-3 col-lg-2">
+                    <div class="form-group">
+                        <label>
+                            Password
+                            <input type="password" name="password" data-ng-model="data.pswd" class="form-control" ng-required="true">
+                        </label>
+                        <div ng-messages="masterForm.password.$error" ng-show="masterForm.password.$touched">
+                            <div ng-messages-include="myLib/mvc/msg/errMsgs.html"></div>
+                        </div>
+                    </div>
+                </div>
+
+
+                <!--Confirm Password-->
+
+                <div class="col-xs-6 col-sm-6 col-md-3 col-lg-2">
+                    <div class="form-group">
+                        <label>
+                            Confirm Password
+                            <input type="password" name="confirmPassword" data-ng-model="local.confirmPswd" class="form-control" ng-required="true">
+                        </label>
+                        <div ng-messages="masterForm.confirmPassword.$error" ng-show="masterForm.confirmPassword.$touched">
+                            <div ng-messages-include="myLib/mvc/msg/errMsgs.html"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+             <!--country field-->
+            <div class="row">
+
+                <!--country-->
+
+                <div class="col-xs-12 col-sm-12 col-md-6 col-lg-2">
+                    <div class="form-group">
+                        <div><label for="country" style="color:black">Country</label></div>
+                        <select class="form-control" name="country" data-ng-change="onGroupChange()" data-ng-options="country.name as country.name for country in countryList" data-ng-disabled="disableControl()" data-ng-model=" data.country" ng-required="true"></select>
+
+                    </div>
+                </div>
+            </div>
+
+            <!--DOB field--> <!--gender field-->
+            <div class="row">
+
+                <!--DOB-->
+                <div class="col-xs-12 col-sm-12 col-md-6 col-lg-2">
+                    <div class="form-group">
+                        <div><label label for="Date" style="color:black">DOB</label></div>
+                        <input type="text" name="DOB" datepicker-popup="{{calendar.dateFormat}}" show-button-bar="false" datepicker-options="calendar.dateOptions" name="input" ng-model="local.dob" class="form-control" required>
+
+                        <div ng-messages="masterForm.DOB.$error" ng-show="masterForm.DOB.$touched">
+                            <div ng-messages-include="myLib/mvc/msg/errMsgs.html"></div>
+                        </div>
+                    </div>
+
+                </div>
+
+
+                <!--gender-->
+
+                <div class="col-xs-12 col-sm-12 col-md-6 col-lg-2">
+                    <div class="form-group">
+                        Gender
+                        <br />
+                        <br />
+                        <label>
+                            <input name="gender" type="radio" ng-model="data.gender" ng-required="true" value="male">
+                            Male
+                        </label>
+                        <label>
+                            <input name="gender" type="radio" ng-model="data.gender" ng-required="true" value="female">
+                            female
+                        </label><br />
+                       
+
+                        <div ng-messages="masterForm.gender.$error" ng-show="masterform.gender.$touched">
+                            <div ng-messages-include="myLib/mvc/msg/errMsgs.html"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+
+
+
+            <button ng-click="onSaveNewUser()">save</button>
+            <button ng-click="onAbort()">abort</button>
+
+        </div>
+
+
+            
+
+
+
+</form>

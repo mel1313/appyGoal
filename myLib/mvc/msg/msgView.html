@@ -1,0 +1,31 @@
+﻿
+<div class="modal-header">
+    <div data-ng-show="data.isAlert">
+        <h3><a><img src="myLib/icons/Alert.jpg" height="25" width="25" />{{ data.title }}</a></h3>
+    </div>
+    <div data-ng-show="data.isError">
+        <h3><a><img src="myLib/icons/Error.jpg" height="25" width="25" />{{ data.title }}</a></h3>
+    </div>
+    <div data-ng-show="data.isConfirm">
+        <h3><a><img src="myLib/icons/Confirm.png" height="25" width="25" />{{ data.title }}</a></h3>
+    </div>
+    <div data-ng-show="data.isSuccess">
+        <h3><a><img src="myLib/icons/Success.jpg" height="25" width="25" />{{ data.title }}</a></h3>
+    </div>
+
+</div>
+
+<div class="modal-body">
+    <!--<span ng-bind-html="data.text"></span>-->
+    <div data-ng-bind-html="data.text"></div>
+    
+
+</div>
+
+<div class="modal-footer">
+
+    <button data-ng-model="button" data-ng-show="!data.isConfirm" class="btn btn-warning" data-ng-click="onOk()">Ok</button>
+    <button data-ng-model="button" data-ng-show="data.isConfirm" class="btn btn-danger" data-ng-click="onOk()">Ok</button>
+    <button data-ng-model="button" data-ng-show="data.isConfirm" class="btn btn-default active" data-ng-click="onCancel()">Cancel</button>
+
+</div>

@@ -1,0 +1,64 @@
+-- Testing
+-- crudIns 'system','20160101','test1','test1 Name'
+
+Create Procedure [dbo].[crudIns]
+(
+	@createdBy char(35),
+    @createdOn smallDateTime,
+	@code char(15),
+	@name varchar(35)
+)
+	
+
+
+AS
+
+SET NOCOUNT ON
+
+DECLARE @_id uniqueIdentifier
+DECLARE @ErrMsg_VC  varchar(max)
+
+
+-- Create New ID
+Select @_id = newid() 
+
+-- Insert Action
+Insert into crud
+(
+_id,
+createdBy,
+createdOn,
+code,
+name
+)
+Select
+@_id,
+@createdBy,
+@createdOn,
+@code,
+@name
+
+If @@rowCount = 0
+BEGIN
+	Select @ErrMsg_Vc = 'Unable to insert record <br/>'
+	GOTO ENDERROR
+END
+
+Select _id = @_id
+
+RETURN  
+
+-- **************
+-- Error Handling
+-- **************
+
+ENDERROR:
+   BEGIN
+	 RAISERROR (@ErrMsg_VC, 16, 1)
+	 RETURN -1
+   END
+
+
+
+
+

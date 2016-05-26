@@ -1,0 +1,32 @@
+﻿<div class="modal-header">
+    Add Game
+</div>
+
+<div class="modal-body">
+
+    <div class="row">
+        <div class="form-group">
+            <div class="col-xs-6 col-sm-6 col-md-3 col-lg-3">
+                <div><label label for="Date" style="color:blue">Date</label></div>
+                <input type="text" datepicker-popup="{{calendar.dateFormat}}" show-button-bar="false" datepicker-options="calendar.dateOptions" name="input" ng-model="data.date" class="form-control" required>
+            </div>
+        </div>
+    </div>
+    
+
+<br />
+
+    
+    <div data-ui-grid="form.playerTable" data-ui-grid-edit data-ui-grid-row-edit data-ui-grid-cellnav>
+    </div>
+
+    </div>
+
+
+
+        <div class="modal-footer">
+
+            <button data-ng-model="button" class="btn btn-success" data-ng-click="onOk()">Ok</button>
+            <button data-ng-model="button" class="btn btn-default active" data-ng-click="onCancel()">Cancel</button>
+
+        </div>

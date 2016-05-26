@@ -1,0 +1,100 @@
+﻿<form name="masterForm">
+
+    <div class="container">
+
+        <div ng-include="'mylib/mvc/master/masterHeaderView.html'"></div>
+
+
+        <div ng-include="'mylib/mvc/master/masterTableView.html'"></div>
+
+        <div class="row">
+            <div class="col-xs-12 col-sm-5 col-md-3 col-lg-2" data-ng-hide="showTable()">
+                <div class="form-group">
+                    <div><label for="userId" style="color:blue">UserId</label></div>
+                    <input type="text" name="userId" class="form-control" data-ng-model="data.userId" data-ng-disabled="disableControl()" ng-required="true" ng-maxlength="15" />
+
+                    <div ng-messages="masterForm.userId.$error" ng-show="masterForm.userId.$touched">
+                        <div ng-messages-include="myLib/mvc/msg/errMsgs.html"></div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col-xs-12 col-sm-5 col-md-3 col-lg-2" data-ng-hide="showTable()">
+                <div class="form-group">
+                    <div><label for="name" style="color:blue">Display Name</label></div>
+                    <input type="text" name="name" class="form-control" data-ng-model="data.name" data-ng-disabled="disableControl()" ng-required="true" ng-maxlength="35" />
+
+                    <div ng-messages="masterForm.name.$error" ng-show="masterForm.name.$touched">
+                        <div ng-messages-include="myLib/mvc/msg/errMsgs.html"></div>
+                    </div>
+
+
+                </div>
+
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col-xs-12 col-sm-5 col-md-3 col-lg-2" data-ng-hide="showTable()">
+
+                <div class="form-group">
+                    <div><label for="userGroup" style="color:blue">User Group</label></div>
+                    <select class="form-control" name="userGroup" data-ng-options="group.key as group.value for group in userGroupList" data-ng-disabled="disableControl()" data-ng-model="data.userGroup" ng-required="true" ng-minlength="1"></select>
+
+                    <div ng-messages="masterForm.userGroup.$error" ng-show="masterForm.userGroup.$touched">
+                        <div ng-messages-include="myLib/mvc/msg/errMsgs.html"></div>
+                    </div>
+                </div>
+
+            </div>
+
+        </div>
+
+        <div class="row">
+            <div class="col-xs-12 col-sm-5 col-md-3 col-lg-2" data-ng-hide="showTable()">
+
+                <div class="form-group" ng-show="!data.activeDir">
+                    <label for="Pswd" ng-show="!data.ActiveDir">Password</label>
+                    <input type="password" name="pswd" class="form-control" data-ng-disabled="disableControl()" data-ng-model="data.pswd" ng-required="true" />
+                    <div ng-messages="masterForm.pswd.$error" ng-show="masterForm.pswd.$touched">
+                        <div ng-messages-include="myLib/mvc/msg/errMsgs.html"></div>
+                    </div>
+
+
+                </div>
+
+                <div class="form-group" ng-show="!data.activeDir">
+                    <label for="ResetPswd" ng-show="!data.ActiveDir">Reset Password</label>
+                    <input type="checkbox" data-ng-disabled="disableControl('reset')" data-ng-model="data.reset">
+                </div>
+
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col-xs-12 col-sm-5 col-md-3 col-lg-2" data-ng-hide="showTable()">
+
+
+                <div class="form-group">
+                    <label for="email" style="color:blue">EMail</label>
+                    <input type="email" name="email" class="form-control" data-ng-disabled="disableControl()" data-ng-model="data.eMail" ng-required="true" ng-maxlength="100" />
+
+                    <div ng-messages="masterForm.email.$error" ng-show="masterForm.email.$touched">
+                        <div ng-messages-include="myLib/mvc/msg/errMsgs.html"></div>
+                    </div>
+
+
+                </div>
+            </div>
+        </div>
+
+       
+
+        <div ng-include="'myLib/mvc/master/masterFooterView.html'"></div>
+    </div>
+
+</form>
+

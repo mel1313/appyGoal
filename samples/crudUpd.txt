@@ -1,0 +1,52 @@
+-- Testing
+-- crudUpd '00000000-0000-0000-0000-000000000000',0000, 'system','20160101','test1','test1 Name'
+
+Create Procedure [dbo].[crudUpd]
+(
+	@_id uniqueIdentifier,
+	@_ts bigInt,
+	@updatedBy char(35),
+    @updatedOn smallDateTime,
+	@code char(15),
+	@name varchar(35)
+	
+)
+
+
+AS
+
+SET NOCOUNT ON
+
+DECLARE @ErrMsg_VC  varchar(200)
+
+UPDATE crud set 
+updatedBy = @updatedBy,  
+updatedOn = @updatedOn,
+code = @code,
+name = @name 
+where _id =  @_id and CONVERT(decimal, _ts + 0) = @_ts
+
+If @@rowCount = 0
+BEGIN
+	Select @ErrMsg_Vc = 'Unable to update record <br/> Record may have been modified by another user <br/> Please refresh data'
+	GOTO ENDERROR
+END
+
+
+RETURN  
+
+-- **************
+-- Error Handling
+-- **************
+
+ENDERROR:
+   BEGIN
+    RAISERROR (@ErrMsg_VC, 16, 1)
+	RETURN -1
+   END
+
+
+
+
+
+

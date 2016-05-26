@@ -1,0 +1,49 @@
+﻿<div class="row">
+    <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+        <hr style="height:3px;border:none;color:#333;background-color:#333;" />
+
+
+     
+            <div data-ng-hide="showTable()">
+                <div data-ng-show="isSaveMode()">
+                    <button data-ng-hide="form.hideSave" class="btn btn-success" data-ng-click="onSave()">Save</button>
+                    <button class="btn btn-danger" data-ng-click="onAbort()">Abort</button>
+                </div>
+
+                <div data-ng-show="isViewMode()">
+                    <button data-ng-hide="form.hideEdit" class="btn btn-success" data-ng-click="onEdit()">Edit</button>
+                    <button class="btn btn-danger" data-ng-click="onHome()">Home</button>
+
+                    <!--<div align="right" ng-show="form.mode==form.updMode || form.mode==form.viewMode" style="font-size:10px">
+                        Created By: {{data.createdBy}} on {{data.createdOn}}
+                        <br />
+                        Updated On: {{data.updatedBy}} on {{data.updatedOn}}
+                    </div>-->
+
+                </div>
+
+               
+
+            </div>
+
+            <div data-ng-show="showTable()">
+                <button data-ng-hide="form.hideInsert" data-ng-model=" button" class="btn btn-success" data-ng-click="onInsert()">Insert</button>
+                <button data-ng-hide="form.hideDelete" data-ng-model="button" class="btn btn-warning" data-ng-click="onDelete()">Delete</button>
+                <button data-ng-hide="form.hideView" class="btn btn-primary" data-ng-click="onView()">View</button>
+                <!--<button class="btn btn-danger" data-ng-click="onExit()">Exit</button>-->
+            </div>
+
+
+
+
+       
+    </div>
+</div>
+
+
+
+
+
+
+
+

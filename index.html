@@ -1,0 +1,74 @@
+﻿<!DOCTYPE html>
+
+<head>
+    <title></title>
+   
+    <!--Angular Libraries And Styles-->
+    <script src="ngLib/angular.min.js"></script>
+    <!-- load ngmessages -->
+    <script src="//ajax.googleapis.com/ajax/libs/angularjs/1.4.0/angular-messages.js"></script>
+    <script src="ngLib/ui-bootstrap-tpls-0.10.0.js"></script>
+    <!--<script src="ngLib/ui-bootstrap-tpls-0.13.4.min.js"></script>-->
+
+    <link href="ngLib/css/bootstrap.min.css" rel="stylesheet">
+    <script src="ngLib/angular-sanitize.min.js"></script>
+    <script src="ngLib/angular-touch.min.js"></script>
+    <script src="ngLib/ui-grid-stable.js"></script>
+    <link rel="stylesheet" href="ngLib/css/ui-grid-stable.css" type="text/css">
+
+  
+ 
+    <script type="text/javascript" src="ngLib/ng-file-upload.js"></script>
+    <script type="text/javascript" src="ngLib/ng-file-upload-shim.js"></script>
+     <script type="text/javascript" src="ngLib/angular-local-storage.min.js"></script>
+    <link rel="stylesheet" href="myLib/css/app.css">
+    <script src="ngLib/angular-route.min.js"></script>
+
+    <!--mandatory load first-->
+    <script src="js/app.js"></script>
+
+    <!--myLibrary-->
+    <link rel="stylesheet" href="myLib/css/app.css">
+    <script src="myLib/js/sysBitApi.js"></script>
+    <script src="myLib/mvc/msg/msgController.js"></script>
+    <script src="myLib/mvc/logIn//logInController.js"></script>
+    <script src="myLib/mvc/master/masterController.js"></script>
+    <script src="myLib/mvc/userId/userIdController.js"></script>
+    <script src="myLib/mvc/group/groupController.js"></script>
+
+
+
+
+   <!--for  this application only-->
+    <script src="mvc/splash/splashController.js"></script>
+    <script src="mvc/menu/menuController.js"></script>
+    <script src="mvc/userLogin/userLoginController.js"></script>
+    <script src="mvc/userLogin/newUserController.js"></script>
+    <script src="mvc/verify/verifyController.js"></script>
+    <script src="mvc/record/recordController.js"></script>
+    <script src="mvc/stats/statsController.js"></script>
+    <script src="mvc/memberGroup/memberGroupController.js"></script>
+    <script src="mvc/group/groupController.js"></script>
+    <script src="mvc/record/recordController.js"></script>
+    <script src="mvc/shop/shopController.js"></script>
+    <script src="mvc/chat/chatController.js"></script>
+    <script src="mvc/recordScore/recordScoreController.js"></script>
+    <script src="mvc/player/playerController.js"></script>
+    <script src="mvc/addScore/addScoreController.js"></script>
+    <script src="mvc/verifyFriend/verifyFriendController.js"></script>
+    <script src="mvc/addGame/addGameController.js"></script>
+    <script src="mvc/modifyGoal/modifyGoalController.js"></script>
+    <script src="mvc/playerHistory/playerHistoryController.js"></script>
+
+    <link rel="stylesheet" href="css/app.css">
+
+
+   
+</head>
+        
+        <body ng-app="app" ng-controller="masterController">
+
+        <ng-view> </ng-view>
+
+</body>
+</html>
